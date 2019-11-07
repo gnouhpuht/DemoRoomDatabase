@@ -1,11 +1,14 @@
 package com.phuong.demoroomdatabase.activity;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.phuong.demoroomdatabase.R;
 
-public class StoryActivity extends AppCompatActivity {
+public class ContentActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

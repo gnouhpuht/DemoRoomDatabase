@@ -3,19 +3,16 @@ package com.phuong.demoroomdatabase.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.phuong.demoroomdatabase.R;
 import com.phuong.demoroomdatabase.adapter.AdapterTopic;
-import com.phuong.demoroomdatabase.component.Topic;
+import com.phuong.demoroomdatabase.model.Topic;
 import com.phuong.demoroomdatabase.db.DatabaseClient;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements AdapterTopic.ITop
         buttonAddTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddTopicStory.class);
+                Intent intent = new Intent(MainActivity.this, AddTopic.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +80,8 @@ public class MainActivity extends AppCompatActivity implements AdapterTopic.ITop
 
     @Override
     public void onClick(int position) {
-
+        Intent intent=new Intent(this,StoryActivity.class);
+        startActivity(intent);
     }
 
     @Override

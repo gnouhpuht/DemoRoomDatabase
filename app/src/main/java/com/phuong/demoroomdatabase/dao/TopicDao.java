@@ -5,8 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-
-import com.phuong.demoroomdatabase.component.Topic;
+import com.phuong.demoroomdatabase.model.Topic;
 import java.util.List;
 
 

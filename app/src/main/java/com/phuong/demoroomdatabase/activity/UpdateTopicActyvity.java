@@ -8,19 +8,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.phuong.demoroomdatabase.R;
-import com.phuong.demoroomdatabase.component.Topic;
+import com.phuong.demoroomdatabase.model.Topic;
 import com.phuong.demoroomdatabase.db.DatabaseClient;
 
 public class UpdateTopicActyvity extends AppCompatActivity {
     private EditText etTopic;
     private CheckBox checkBoxFinished;
+    private ImageButton back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +30,13 @@ public class UpdateTopicActyvity extends AppCompatActivity {
 
         etTopic = findViewById(R.id.et_topic_update);
         checkBoxFinished = findViewById(R.id.checkBoxFinished);
+        back=findViewById(R.id.btn_back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
         final Topic topic = (Topic) getIntent().getSerializableExtra("topic");
